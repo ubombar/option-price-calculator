@@ -26,4 +26,5 @@ func main() {
 	pb.RegisterOptionServiceServer(grpcServer, &optionserver.OptionServer{})
 	grpcServer.Serve(lis)
 
+	logrus.Infoln("Server Stopped")
 }
