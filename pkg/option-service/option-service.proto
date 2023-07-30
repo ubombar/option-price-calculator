@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "github.com/ubombar/option-price-calculator/option-server";
+
+service OptionService {
+    rpc OptionPrice (OptionPriceRequest) returns (OptionPriceResponse);
+}
+
+message OptionPriceRequest {
+    float stock_price = 1;
+    float exercise_price = 2;
+    float volatility = 3;
+    float expiration_time = 4;
+    float risk_free_interest_rate = 5;
+}
+
+message OptionPriceResponse {
+    float stock_price = 1;
+    float exercise_price = 2;
+    float volatility = 3;
+    float expiration_time = 4;
+    float risk_free_interest_rate = 5;
+    float option_price = 6;
+}
