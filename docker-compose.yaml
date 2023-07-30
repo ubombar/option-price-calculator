@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  option-server:
+    container_name: option-server
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: option-server:latest
